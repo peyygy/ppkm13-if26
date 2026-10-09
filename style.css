@@ -465,6 +465,12 @@ footer p:hover {
     animation-delay: 0.15s;
 }
 
+.anggota-section .member-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 30px;
+}
+
 
 /* Container Grid Kartu Anggota */
 
@@ -692,6 +698,38 @@ footer p:hover {
     font-size: 13px;
     color: #94a3b8;
     font-weight: 500;
+}
+
+.member-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.member-socials a {
+    max-width: 100%;
+    color: #bfdbfe;
+    background: rgba(37, 99, 235, 0.18);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    border-radius: 999px;
+    padding: 5px 9px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+    font-size: 10px;
+    font-weight: 600;
+    transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.member-socials a:hover {
+    color: #ffffff;
+    background: rgba(37, 99, 235, 0.55);
+    border-color: rgba(147, 197, 253, 0.7);
+    transform: translateY(-2px);
 }
 
 
@@ -1028,6 +1066,13 @@ code {
     }
 }
 
+@media (max-width: 900px) {
+    .anggota-section .member-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+}
+
 
 /* Penyesuaian HP & Tablet */
 
@@ -1036,7 +1081,7 @@ code {
         font-size: 28px;
     }
     .member-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     .kakak-asuh-container {
